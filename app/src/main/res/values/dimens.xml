@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="mainSongTextSize">24sp</dimen>
-    <dimen name="mainPadding">8dp</dimen>
+    <dimen name="mainSongTextSize">26sp</dimen>
+    <dimen name="mainPadding">12dp</dimen>
     <dimen name="iconSize">64dp</dimen>
+    <dimen name="secondaryTextSize">18sp</dimen>
 </resources>
