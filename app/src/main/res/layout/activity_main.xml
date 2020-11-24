@@ -34,7 +34,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="ARTIST"
                 android:id="@+id/artist_txt"
                 android:textSize="@dimen/mainSongTextSize"/>
             <TextView
@@ -45,7 +44,6 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="SONG"
                 android:id="@+id/song_txt"
                 android:textSize="@dimen/mainSongTextSize"/>
         </LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/colorPrimaryLight">
+    <ImageView
+        style="@style/icons_style"
+        tools:src="@drawable/a_drop_of_white_album_cover"
+        android:id="@+id/artwork_img"
+        />
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/song_txt"
+            android:textSize="22sp"
+            tools:text="Last Song"
+            android:gravity="start|bottom"
+            android:layout_margin="8dp"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/artist_txt"
+            android:textSize="@dimen/secondaryTextSize"
+            tools:text="Cairokee"
+            android:gravity="start|top"
+            android:layout_margin="8dp"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/duration_txt"
+        android:textSize="@dimen/secondaryTextSize"
+        tools:text="4:47"
+        android:gravity="end"/>
+    <ImageView
+        style="@style/icons_style"
+        android:src="@drawable/ic_play_arrow"
+        android:background="@color/colorAccent"
+        android:contentDescription="@string/artwork"
+        />
+
+</LinearLayout>

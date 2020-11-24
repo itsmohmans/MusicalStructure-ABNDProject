@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryLight"
@@ -14,7 +15,7 @@
             android:layout_width="300dp"
             android:layout_height="300dp"
             android:scaleType="centerCrop"
-            android:src="@mipmap/ic_launcher"
+            tools:src="@drawable/a_drop_of_white_album_cover"
             android:layout_margin="@dimen/mainPadding"
             android:id="@+id/song_artwork_img"
             android:contentDescription="@string/artwork" />
@@ -23,14 +24,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/song_txt"
-            android:text="SONG NAME"
+            tools:text="SONG NAME"
             android:textSize="@dimen/mainSongTextSize"
             android:layout_margin="@dimen/mainPadding"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/artist_txt"
-            android:text="ARTIST"
+            tools:text="ARTIST"
             android:textSize="@dimen/secondaryTextSize"
             android:layout_margin="@dimen/mainPadding"/>
         <LinearLayout
@@ -43,18 +44,18 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="-:--"
+                android:text="00:00"
                 android:textSize="@dimen/secondaryTextSize"
                 android:id="@+id/current_time_txt"/>
             <SeekBar
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="9"/>
+                android:layout_weight="4"/>
             <TextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="-:--"
+                tools:text="-:--"
                 android:textSize="@dimen/secondaryTextSize"
                 android:id="@+id/duration_txt"/>
         </LinearLayout>
