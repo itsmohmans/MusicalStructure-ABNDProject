@@ -10,11 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".NowPlaying"
-            android:label="@string/now_playing" />
-        <activity android:name=".MainActivity"
-            android:label="@string/all_songs"
-            >
+            android:name=".NowPlayingActivity"
+            android:label="@string/now_playing"
+            android:parentActivityName="com.mohammadmansour.musicalstructure.MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.mohammadmansour.musicalstructure.MainActivity"/>
+        </activity>
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

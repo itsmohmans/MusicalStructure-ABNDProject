@@ -4,17 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -22,8 +18,6 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity {
 
     private boolean isPlaying = false;
-    @BindView(R.id.now_playing_footer)
-    LinearLayout nowPlayingFooter;
     @BindView(R.id.songs_list)
     ListView listView;
     @BindView(R.id.artist_txt)
@@ -32,12 +26,13 @@ public class MainActivity extends AppCompatActivity {
     TextView nowPlayingSong;
     @BindView(R.id.play_btn)
     ImageView playBtn;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
 
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Songs song = songsList.get(position);
-                Intent i = new Intent(getApplicationContext(), NowPlaying.class);
+                Intent i = new Intent(getApplicationContext(), NowPlayingActivity.class);
                 i.putExtra("title", song.getSongTitle());
                 i.putExtra("artist", song.getArtistName());
                 i.putExtra("albumArt", song.getArtworkResID());

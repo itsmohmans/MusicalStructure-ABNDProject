@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,7 +14,7 @@ import java.util.Objects;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NowPlaying extends AppCompatActivity {
+public class NowPlayingActivity extends AppCompatActivity {
 
     private boolean isPlaying = false;
     @BindView(R.id.song_artwork_img)
@@ -26,11 +27,15 @@ public class NowPlaying extends AppCompatActivity {
     TextView duration;
     @BindView(R.id.play_btn)
     ImageView playBtn;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_now_playing);
         ButterKnife.bind(this);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         playBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,5 +65,15 @@ public class NowPlaying extends AppCompatActivity {
         String[] timeParts = String.valueOf(songDuration).split("\\.");
         duration.setText(String.format("0%s:%s", timeParts[0], timeParts[1]));
 
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            finish();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
